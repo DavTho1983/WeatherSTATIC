@@ -29,7 +29,7 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: ['@/assets/css/main.css'],
 
   /*
    ** Nuxt.js modules
@@ -38,16 +38,35 @@ module.exports = {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     // Doc: https://bootstrap-vue.js.org/docs/
-    'bootstrap-vue/nuxt'
+    'bootstrap-vue/nuxt',
+    [
+      'nuxt-fontawesome',
+      {
+        imports: [
+          {
+            set: '@fortawesome/free-solid-svg-icons',
+            icons: ['faPlus']
+          },
+          {
+            set: '@fortawesome/free-solid-svg-icons',
+            icons: ['faMinus']
+          }
+        ]
+      }
+    ]
   ],
   /*
    ** Axios module configuration
    */
   axios: {
-    baseURL: 'localhost:8000',
+    baseURL: 'http://localhost:8000/api/',
     proxyHeaders: false,
     credentials: false,
     mode: 'no-cors'
+  },
+
+  env: {
+    baseUrl: process.env.BASE_URL || 'http://localhost:8000/api/'
   },
 
   /*
