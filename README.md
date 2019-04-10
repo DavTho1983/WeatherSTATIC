@@ -12,7 +12,5 @@ If you have npm installed, in your project terminal
 
   npm run dev
 
-To consume the api, the API repo will need to be running. The API is located at 
-
-  https://github.com/DavTho1983/WeatherAPI
+To consume the api, the API repo will need to be running.
 
