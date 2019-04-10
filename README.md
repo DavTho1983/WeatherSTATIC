@@ -6,7 +6,9 @@ To run this project, first clone the repo with
 
   git clone https://github.com/DavTho1983/WeatherSTATIC.git
 
-If you have npm installed, run 
+If you have npm installed, in your project terminal
+
+  cd Weather
 
   npm run dev
 
